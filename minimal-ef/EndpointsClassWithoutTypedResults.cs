@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+    using Microsoft.AspNetCore.Http.HttpResults;
+    using Microsoft.AspNetCore.OpenApi;
 namespace minimal_ef;
 
 public static class EndpointsClassWithoutTypedResults
@@ -74,7 +74,6 @@ public static class EndpointsClassWithoutTypedResults
         .Produces<Widget4>(StatusCodes.Status200OK)
         .Produces(StatusCodes.Status404NotFound);
     }
-    
 	public static void MapWidget5Endpoints (this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Widget5").WithTags(nameof(Widget5));

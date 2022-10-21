@@ -25,6 +25,8 @@ app.MapControllers();
 
 app.MapWidgetEndpoints();
 
+app.MapWidget6Endpoints();
+
 app.MapWidget2Endpoints();
 
 app.MapWidget3Endpoints();

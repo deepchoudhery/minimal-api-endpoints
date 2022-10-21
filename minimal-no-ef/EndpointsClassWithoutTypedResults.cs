@@ -15,7 +15,7 @@ public static class EndpointsClassWithoutTypedResults
         .WithName("GetAllWidget4s")
         .WithOpenApi()
         .Produces<Widget4[]>(StatusCodes.Status200OK);
-
+        
         group.MapGet("/{id}", (int id) =>
         {
             //return new Widget4 { ID = id };
@@ -46,9 +46,8 @@ public static class EndpointsClassWithoutTypedResults
         })
         .WithName("DeleteWidget4")
         .WithOpenApi()
-        .Produces<Widget4>(StatusCodes.Status200OK);
+        .Produces<Widget4>(StatusCodes.Status200OK);  
     }
-    
 	public static void MapWidget5Endpoints (this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Widget5").WithTags(nameof(Widget5));
@@ -60,13 +59,14 @@ public static class EndpointsClassWithoutTypedResults
         .WithName("GetAllWidget5s")
         .WithOpenApi()
         .Produces<Widget5[]>(StatusCodes.Status200OK);
-
+        
         group.MapGet("/{id}", (int id) =>
         {
             //return new Widget5 { ID = id };
         })
         .WithName("GetWidget5ById")
-        .WithOpenApi();
+        .WithOpenApi()
+        .Produces<Widget5>(StatusCodes.Status200OK);
 
         group.MapPut("/{id}", (int id, Widget5 input) =>
         {
@@ -90,6 +90,6 @@ public static class EndpointsClassWithoutTypedResults
         })
         .WithName("DeleteWidget5")
         .WithOpenApi()
-        .Produces<Widget5>(StatusCodes.Status200OK);
+        .Produces<Widget5>(StatusCodes.Status200OK);  
     }
 }

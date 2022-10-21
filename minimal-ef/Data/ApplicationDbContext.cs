@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 
         public DbSet<Widget> Widget { get; set; } = default!;
 
+        public DbSet<Widget6> Widget6 { get; set; } = default!;
+
         public DbSet<Widget2> Widget2 { get; set; } = default!;
 
         public DbSet<Widget3> Widget3 { get; set; } = default!;

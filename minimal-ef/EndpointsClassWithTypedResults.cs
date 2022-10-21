@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+    using Microsoft.AspNetCore.Http.HttpResults;
+    using Microsoft.AspNetCore.OpenApi;
 namespace minimal_ef;
 
 public static class EndpointsClassWithTypedResults
@@ -66,7 +66,6 @@ public static class EndpointsClassWithTypedResults
         .WithName("DeleteWidget2")
         .WithOpenApi();
     }
-    
 	public static void MapWidget3Endpoints (this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Widget3").WithTags(nameof(Widget3));

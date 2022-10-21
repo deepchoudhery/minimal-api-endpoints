@@ -14,7 +14,7 @@ public static class EndpointsClassWithTypedResults
         })
         .WithName("GetAllWidget2s")
         .WithOpenApi();
-
+        
         group.MapGet("/{id}", (int id) =>
         {
             //return new Widget2 { ID = id };
@@ -31,19 +31,18 @@ public static class EndpointsClassWithTypedResults
 
         group.MapPost("/", (Widget2 model) =>
         {
-            //return TypedResults.Created($"/Widget2s/{model.ID}", model);
+            //return Results.Created($"/Widget2s/{model.ID}", model);
         })
         .WithName("CreateWidget2")
         .WithOpenApi();
 
         group.MapDelete("/{id}", (int id) =>
         {
-            //return TypedResults.Ok(new Widget2 { ID = id });
+            //return Results.Ok(new Widget2 { ID = id });
         })
         .WithName("DeleteWidget2")
-        .WithOpenApi();
+        .WithOpenApi();  
     }
-    
 	public static void MapWidget3Endpoints (this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Widget3").WithTags(nameof(Widget3));
@@ -54,7 +53,7 @@ public static class EndpointsClassWithTypedResults
         })
         .WithName("GetAllWidget3s")
         .WithOpenApi();
-
+        
         group.MapGet("/{id}", (int id) =>
         {
             //return new Widget3 { ID = id };
@@ -71,16 +70,16 @@ public static class EndpointsClassWithTypedResults
 
         group.MapPost("/", (Widget3 model) =>
         {
-            //return TypedResults.Created($"/Widget3s/{model.ID}", model);
+            //return Results.Created($"/Widget3s/{model.ID}", model);
         })
         .WithName("CreateWidget3")
         .WithOpenApi();
 
         group.MapDelete("/{id}", (int id) =>
         {
-            //return TypedResults.Ok(new Widget3 { ID = id });
+            //return Results.Ok(new Widget3 { ID = id });
         })
         .WithName("DeleteWidget3")
-        .WithOpenApi();
+        .WithOpenApi();  
     }
 }

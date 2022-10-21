@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-    using Microsoft.AspNetCore.Http.HttpResults;
-    using Microsoft.AspNetCore.OpenApi;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.OpenApi;
 namespace minimal_ef;
 
 public static class EndpointsClassWithTypedResults
